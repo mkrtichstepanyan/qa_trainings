@@ -9,16 +9,16 @@ https://elearn.epam.com/courses/course-v1:EPAM+CSB+ext1/courseware/52963e45e5db4
 
 Write
 
-Create new .txt file with your name_surname in directory homework_1_computer_science_basics
-Solve and fill correct answers bellow
-ex.
-* Convert number 2 from decimal to binary = 10
-.
-.
-After finishing the work
-1.create new branch "name_surname"
-2.commit and push your changes
-3.create Pull Request/Merge Request and assign to Mkrtich Stepanyan
+1. Create new .txt file with your name_surname.txt in directory homework_1_computer_science_basics
+2. Solve and fill correct answers bellow
+    ex.
+    * Convert number 2 from decimal to binary = 10
+    .
+    .
+3. After finishing the work
+    1.create new branch "name_surname"
+    2.commit and push your changes
+    3.create Pull Request/Merge Request and assign to Mkrtich Stepanyan
 
 
 
