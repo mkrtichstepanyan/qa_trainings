@@ -1,5 +1,5 @@
 Read
-Herbert Schildt - Глава 3. Типы данных, переменные и массивы
+Глава 5. Управляющие операторы
 
 EPAM Learn
 Pass all sections and tests in the link bellow
