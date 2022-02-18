@@ -6,7 +6,7 @@ Read
 
 EPAM Learn
 Pass all sections including "Data Types and Algorithms"
-https://elearn.epam.com/courses/course-v1:EPAM+CSB+ext1/courseware/2f61efbabfc74ba38c32f7db60f65213/?activate_block_id=block-v1%3AEPAM%2BCSB%2Bext1%2Btype%40chapter%2Bblock%402f61efbabfc74ba38c32f7db60f65213
+https://learn.epam.com/study/detailsPath?id=455a1a46-29eb-4de2-acd1-20062a39d6e5
 
 Write
 Solve Task1 and Task 2

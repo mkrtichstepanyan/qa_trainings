@@ -3,7 +3,7 @@ Read
 
 EPAM Learn
 Pass all sections and tests in the link bellow
-https://elearn.epam.com/courses/course-v1:EPAM+CSB+ext1/courseware/52963e45e5db48c6b967b3473728ec6a/580a859df2fa4d9badcfa67511c9bdad/1?activate_block_id=block-v1%3AEPAM%2BCSB%2Bext1%2Btype%40vertical%2Bblock%40c40c5631cf0f4455b73cf3d6c96444c0
+https://learn.epam.com/study/detailsPath?id=455a1a46-29eb-4de2-acd1-20062a39d6e5
 
 Write
 Task 3
