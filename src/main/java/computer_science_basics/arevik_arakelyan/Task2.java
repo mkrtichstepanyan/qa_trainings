@@ -11,8 +11,7 @@ public class Task2 {
 
     public static int findSingleNumber(int[] array) {
         int res = 0;
-        int[] arr = new int[]{4, 2, 5, -4, 3, 0, 3, 6, 1, 8, -2, -2, -3, -6, -3, -6, 5, 4, 2, -1, -5, 0, 6, -1, 1, -5, -4};
-        for (int i: arr) {
+        for (int i: array) {
             res ^= i;
         }
         return res;
