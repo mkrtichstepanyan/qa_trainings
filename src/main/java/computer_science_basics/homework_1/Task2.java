@@ -15,7 +15,10 @@ public class Task2 {
     }
 
     public static int findSingleNumber(int[] array) {
-        // TODO: Your code here
-        return 0;
+        int x = 0;
+        for (int element : array) {
+            x = x ^ element;
+        }
+        return x;
     }
 }
