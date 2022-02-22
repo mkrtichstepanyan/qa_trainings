@@ -1,4 +1,4 @@
-package computer_science_basics.homework_1;
+package computer_science_basics.homework_1.Heghine_Khachatryan;
 
 public class Task2 {
 
