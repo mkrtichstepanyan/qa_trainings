@@ -18,8 +18,8 @@ public class Task2 {
 
         int sing = array[0];
 
-        for (int i = 1; i < array.length; i++) {
-            sing = sing ^ array[i];
+        for (int i : array) {
+            sing ^= i;
         }
 
         return sing;
