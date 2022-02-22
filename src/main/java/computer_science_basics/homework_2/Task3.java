@@ -10,7 +10,6 @@ public class Task3 {
     public static void printNumbers(int count) {
 
         // TODO: Your code here
-
     }
 
     /* TODO: Question 2
@@ -32,11 +31,10 @@ public class Task3 {
     public static void table() {
         Scanner console = new Scanner(System.in);
         int num;
+        int sum;
 
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
-
-        System.out.println("Multiplication Table of " + num);
 
         // TODO: Your code here
     }
@@ -76,6 +74,7 @@ public class Task3 {
 
         System.out.print("Enter the power ");
         power = console.nextInt();
+
 
         // TODO: Your code here
 
@@ -121,6 +120,7 @@ public class Task3 {
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
+
 
         } while (choice == 'y' || choice == 'Y');
 
@@ -191,11 +191,7 @@ public class Task3 {
     public static void countNumbers() {
         Scanner console = new Scanner(System.in);
 
-        int number,
-                countPositive = 0,
-                countNegative = 0,
-                countZero = 0;
-
+        int number, countPositive = 0, countNegative = 0, countZero = 0;
         char choice;
 
         // TODO: Your code here
@@ -215,8 +211,8 @@ public class Task3 {
         Scanner console = new Scanner(System.in);
 
         int number;
-        int max = Integer.MIN_VALUE;  // Intialize max with minimum value
-        int min = Integer.MAX_VALUE;  // Intialize min with maximum value
+        int max = Integer.MIN_VALUE;  // Initialize max with minimum value
+        int min = Integer.MAX_VALUE;  // Initializee min with maximum value
 
         char choice;
 
@@ -249,9 +245,7 @@ public class Task3 {
 
         int number;  // To hold number of terms
 
-        int firstTerm = 0,
-                secondTerm = 1,
-                thirdTerm;
+        int firstTerm = 0, secondTerm = 1, thirdTerm;
 
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
@@ -266,12 +260,14 @@ public class Task3 {
         Write a program to calculate the sum of following series where n is input by user.
         1 + 1/2 + 1/3 + 1/4 + 1/5 +…………1/n
     */
-    public static void SumOfSeries() {
+    public static void sumOfSeries() {
         Scanner console = new Scanner(System.in);
 
         int number;  // To hold number of terms
 
+
         double sum = 0;
+
 
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
@@ -300,6 +296,5 @@ public class Task3 {
 
         // TODO: Your code here
     }
-
 }
 
