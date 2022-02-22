@@ -1,4 +1,4 @@
-package computer_science_basics.arevik_arakelyan;
+package computer_science_basics.homework_1.arevik_arakelyan;
 
 public class Task2 {
 
