@@ -16,11 +16,10 @@ public class Task2 {
 
     public static int findSingleNumber(int[] array) {
         // TODO: Your code here
-        int a=0;
-        for(int element :  array){
-            a=a^element;
+        int a = 0;
+        for (int element : array) {
+            a = a ^ element;
         }
         return a;
-
     }
 }
