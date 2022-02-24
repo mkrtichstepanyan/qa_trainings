@@ -5,25 +5,6 @@ import java.util.Scanner;
 
 public class Task3 {
 
-    public static void main(String[] args) {
-        printNumbers(10);
-        sumNumbers();
-        table();
-        factorialDemo1();
-        powerDemo();
-        reverseNumber();
-        readSetIntegers();
-        testPrime();
-        findHcf();
-        sumAgain();
-        countNumbers();
-        findMaxMin();
-        armstrongNumber();
-        fibonacciSeries();
-        sumOfSeries();
-        guessMyNumber();
-    }
-
     /* TODO: Question 1
         Write a program to print numbers from 1 to given parameter.
     */
@@ -64,7 +45,7 @@ public class Task3 {
             table();
         } else {
             System.out.println("Multiplication Table of " + num);
-            for (int i = 0; i < 10; i++) {
+            for (int i = 1; i <= 10; i++) {
                 sum = i * num;
                 System.out.println(i + " * " + num + " = " + sum);
             }
@@ -82,8 +63,9 @@ public class Task3 {
 
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
+
         if (num > 1) {
-            for (int i = 1; i <= num; i++) {
+            for (int i = 2; i <= num; i++) {
                 fact *= i;
             }
         }
@@ -106,6 +88,10 @@ public class Task3 {
         System.out.print("Enter the base number ");
         base = console.nextInt();
 
+        if (base == 0) {
+            throw new ArithmeticException();
+        }
+
         System.out.print("Enter the power ");
         power = console.nextInt();
 
@@ -114,12 +100,11 @@ public class Task3 {
                 result *= base;
             }
             result = 1 / result;
-        }
-        if (power > 0) {
-            for (int i = 1; i <= power; i++) {
+        } else if (power > 0) {
+            for (int i = 0; i < power; i++) {
                 result *= base;
             }
-            if (base < 0) {
+            if (base < 0 && power % 2 == 0 && result < 0) {
                 result = -result;
             }
         }
@@ -225,7 +210,7 @@ public class Task3 {
                 remainder = dividend % divisor;
                 dividend = divisor;
                 divisor = remainder;
-                if (dividend < 0 || divisor < 0) {
+                if (divisor < 0) {
                     hcf = -divisor;
                 } else {
                     hcf = divisor;
@@ -253,10 +238,13 @@ public class Task3 {
         do {
             System.out.print("Enter the first number ");
             number1 = console.nextInt();
+
             System.out.print("Enter the second number ");
             number2 = console.nextInt();
+
             sum = number1 + number2;
             System.out.println(sum);
+
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
         } while (choice == 'y' || choice == 'Y');
@@ -309,25 +297,24 @@ public class Task3 {
         do {
             System.out.print("Enter the number ");
             number = console.nextInt();
+
             list.add(number);
+
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
         } while (choice == 'y' || choice == 'Y');
 
-        Integer maxOfList = list.get(0);
-        Integer minOfList = list.get(0);
+        max = list.get(0);
+        min = list.get(0);
 
         for (int i = 1; i < list.size(); i++) {
-            if (maxOfList < list.get(i)) {
-                maxOfList = list.get(i);
+            if (max < list.get(i)) {
+                max = list.get(i);
             }
-            if (minOfList > list.get(i)) {
-                minOfList = list.get(i);
+            if (min > list.get(i)) {
+                min = list.get(i);
             }
         }
-
-        max = maxOfList;
-        min = minOfList;
 
         System.out.println("Largest number: " + max);
         System.out.println("Smallest number: " + min);
@@ -343,20 +330,20 @@ public class Task3 {
                 digit2,  // To hold second digit (Tens) of number
                 digit3;  // To hold third digit (Hundreds) of number
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> armstrongNumbers = new ArrayList<>();
 
         for (int i = 1; i <= 500; i++) {
             if (i < 10) {
                 digit1 = (int) Math.pow(i, 3);
                 if (digit1 == i) {
-                    list.add(i);
+                    armstrongNumbers.add(i);
                 }
             } else if (i < 100) {
                 digit2 = i % 10;
                 digit1 = (i - digit2) / 10;
                 int sum = (int) (Math.pow(digit1, 3) + Math.pow(digit2, 3));
                 if (sum == i) {
-                    list.add(i);
+                    armstrongNumbers.add(i);
                 }
             } else {
                 digit3 = i % 10;
@@ -364,13 +351,13 @@ public class Task3 {
                 digit1 = ((i - digit3) / 10) / 10;
                 int sum = (int) (Math.pow(digit1, 3) + Math.pow(digit2, 3) + Math.pow(digit3, 3));
                 if (sum == i) {
-                    list.add(i);
+                    armstrongNumbers.add(i);
                 }
             }
         }
 
-        for (Integer integer : list) {
-            System.out.println(integer);
+        for (Integer armstrongNumber : armstrongNumbers) {
+            System.out.print(armstrongNumber + " ");
         }
     }
 
@@ -404,11 +391,11 @@ public class Task3 {
         Scanner console = new Scanner(System.in);
 
         double number;  // To hold number of terms
-
         double sum = 1;
 
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
+
         for (int i = 2; i <= number; i++) {
             sum += 1.0 / i;
         }
@@ -432,7 +419,6 @@ public class Task3 {
         number = (int) (Math.random() * 100);
 
         System.out.println("Guess My Number Game");
-        System.out.println(number);
 
         do {
             guess = console.nextInt();
@@ -448,6 +434,23 @@ public class Task3 {
         System.out.println("You guessed ...yah");
         System.out.println("You guessed by " + tries + " tries");
     }
+
+    public static void main(String[] args) {
+        printNumbers(10);
+        sumNumbers();
+        table();
+        factorialDemo1();
+        powerDemo();
+        reverseNumber();
+        readSetIntegers();
+        testPrime();
+        findHcf();
+        sumAgain();
+        countNumbers();
+        findMaxMin();
+        armstrongNumber();
+        fibonacciSeries();
+        sumOfSeries();
+        guessMyNumber();
+    }
 }
-
-
