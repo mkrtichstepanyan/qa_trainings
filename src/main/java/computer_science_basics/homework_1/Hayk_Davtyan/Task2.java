@@ -1,4 +1,4 @@
-package computer_science_basics.homework_1;
+package computer_science_basics.homework_1.Hayk_Davtyan;
 
 public class Task2 {
 
@@ -11,12 +11,19 @@ public class Task2 {
 
     public static void main(String[] args) {
         int[] twinsArray = {4, 2, 5, -4, 3, 0, 3, 6, 1, 8, -2, -2, -3, -6, -3, -6, 5, 4, 2, -1, -5, 0, 6, -1, 1, -5, -4};
-        System.out.println("The single number is -> " + findSingleNumber(twinsArray));
+        System.out.println("The single number is -> " + findSingleNumber(twinsArray, 0));
     }
 
-    public static int findSingleNumber(int[] array) {
-        // TODO: Your code here
-        return 0;
+    public static int findSingleNumber(int[] array, int j) {
+        int i = 0;
+        int num = array[j];
+        while (i != array.length) {
+            if (num == array[i] && i != j) {
+                j++;
+                return findSingleNumber(array, j);
+            }
+            i++;
+        }
+        return num;
     }
 }
-
