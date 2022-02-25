@@ -61,13 +61,21 @@ public class Task3 {
 
         if (num == 0 || num == 1) {
             System.out.println("Factorial of number " + num + " is: " + fact);
+            return;
+        } else if (num > 1) {
+            while (num != 1) {
+                fact = fact * (num);
+                num -= 1;
+            }
+        } else {
+            while (num != 0) {
+                fact *= num;
+                num += 1;
+            }
+            if (fact > 0) {
+                fact *= (-1);
+            }
         }
-
-        while (num != 1) {
-            fact = fact * (num);
-            num -= 1;
-        }
-
         System.out.println("Factorial: " + fact);
     }
 
@@ -82,18 +90,26 @@ public class Task3 {
 
         int base;
         int power;
-        int result = 1;
+        double result = 1;
 
         System.out.print("Enter the base number ");
         base = console.nextInt();
 
         System.out.print("Enter the power ");
         power = console.nextInt();
-
-        for (int i = power; i > 0; i--) {
-            result *= base;
+        if (power == 0) {
+            System.out.println("Result: " + result);
+            return;
+        } else if (power > 0) {
+            for (int i = power; i > 0; i--) {
+                result *= base;
+            }
+        } else {
+            for (int i = power; i < 0; i++) {
+                result *= base;
+            }
+            result = 1 / result;
         }
-
         System.out.println("Result: " + result);
     }
 
@@ -338,7 +354,7 @@ public class Task3 {
                 digit2,  // To hold second digit (Tens) of number
                 digit3;  // To hold third digit (Hundreds) of number
 
-        for (digit1 = 1; digit1 < 6; digit1++) {
+        for (digit1 = 0; digit1 < 6; digit1++) {
             for (digit2 = 0; digit2 < 10; digit2++) {
                 for (digit3 = 0; digit3 < 10; digit3++) {
                     int num = (digit1 * 100) + (digit2 * 10) + digit3;
@@ -371,8 +387,8 @@ public class Task3 {
         for (int i = 0; i <= number; i++) {
             thirdTerm = firstTerm + secondTerm;
             System.out.println(thirdTerm);
-            firstTerm = thirdTerm;
-            secondTerm = console.nextInt();
+            firstTerm = secondTerm;
+            secondTerm = thirdTerm;
         }
     }
 
