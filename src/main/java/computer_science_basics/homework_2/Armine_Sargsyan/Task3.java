@@ -1,17 +1,40 @@
-package computer_science_basics.homework_2;
+package computer_science_basics.homework_2.Armine_Sargsyan;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Task3 {
+    public static void main(String[] args) {
+        printNumbers(10);
+        /*System.out.println();
+        printNumbers(15);
+        System.out.println();
+        sumNumbers();
+        table();
+        factorialDemo1();
+        powerDemo();
+        reverseNumber();
+        readSetIntegers();
+        testPrime();
+        FindHcf();
+        sumAgain();
+        countNumbers();
+        findMaxMin();
+        armstrongNumber();
+        fibonacciSeries();
+        SumOfSeries();
+        guessMyNumber();*/
 
+    }
     /* TODO: Question 1
         Write a program to print numbers from 1 to given parameter.
     */
-    public static void printNumbers(int count) {
+        public static void printNumbers(int count) {
+            for (int i = 1; i < count ; i++) {
+                System.out.print(i + ", ");
+            }
 
-        // TODO: Your code here
-
-    }
+        }
 
     /* TODO: Question 2
         Write a program to calculate the sum of first 10 natural numbers.
@@ -19,8 +42,10 @@ public class Task3 {
     public static void sumNumbers() {
         int sum = 0;
 
-        // TODO: Your code here
-
+        for (int i = 1; i < 10 ; i++) {
+            sum = sum + i;
+       //  or >>> sum += i;
+        }
         System.out.println("Sum: " + sum);
     }
 
@@ -38,7 +63,10 @@ public class Task3 {
 
         System.out.println("Multiplication Table of " + num);
 
-        // TODO: Your code here
+        for (int i = 0; i <= 10 ; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+
+        }
     }
 
 
@@ -53,8 +81,9 @@ public class Task3 {
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
 
-        // TODO: Your code here
-
+        for (int i = 1; i <= num ; i++) {
+            fact *= i;
+        }
         System.out.println("Factorial: " + fact);
     }
 
@@ -77,8 +106,9 @@ public class Task3 {
         System.out.print("Enter the power ");
         power = console.nextInt();
 
-        // TODO: Your code here
-
+        for (int i = 1; i <= power; i++) {
+            result *= base;
+        }
         System.out.println("Result: " + result);
     }
 
@@ -96,7 +126,10 @@ public class Task3 {
         System.out.print("Enter the number ");
         number = console.nextInt();
 
-        // TODO: Your code here
+            for(;number != 0; number /= 10) {
+            int digit = number % 10;
+            reverse = reverse * 10 + digit;
+        }
 
         System.out.println("Reverse of " + number + " is " + reverse);
     }
@@ -117,7 +150,11 @@ public class Task3 {
             System.out.print("Enter the number ");
             number = console.nextInt();
 
-            // TODO: Your code here
+                if(number % 2 == 0){
+                    evenSum += number;
+                } else {
+                    oddSum += number;
+                }
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
@@ -140,9 +177,22 @@ public class Task3 {
         System.out.print("Enter the positive integer ");
         number = console.nextInt();
 
-        // TODO: Your code here
-
+        int m, flag=0;
+        m=number/2;
+        if(number == 0||number == 1){
+            System.out.println(number +" is not prime number");
+        }else{
+            for(int i=2; i<=m; i++){
+                if(number%i == 0){
+                    System.out.println(number +" is not prime number");
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0)  { System.out.println(number +" is prime number"); }
+        }
     }
+
 
 
     /* TODO: Question 8
@@ -160,7 +210,10 @@ public class Task3 {
         System.out.print("Enter the second number ");
         divisor = console.nextInt();
 
-        // TODO: Your code here
+        for(remainder = 1; remainder <= dividend || remainder <= divisor; remainder++) {
+            if( dividend%remainder == 0 && divisor%remainder == 0 )
+                hcf = remainder;
+        }
 
         System.out.println("HCF: " + hcf);
     }
@@ -179,8 +232,16 @@ public class Task3 {
         int number1, number2;
         char choice;
 
-        // TODO: Your code here
-    }
+        do {
+            System.out.println("Enter the first number:");
+            number1 = console.nextInt();
+            System.out.println("Enter the second number: ");
+            number2 = console.nextInt();
+            System.out.println("Sum of " + number1 + " and " + number2 + " is equal to " + (number1 + number2));
+            System.out.println("Do you want to continue? y/n");
+            choice = console.next().charAt(0);
+
+        } while (choice == 'y' || choice == 'Y');    }
 
 
     /* TODO: Question 10
@@ -198,7 +259,23 @@ public class Task3 {
 
         char choice;
 
-        // TODO: Your code here
+        do {
+            System.out.print("Enter the number: ");
+            number = console.nextInt();
+
+            if(number > 0){
+                countPositive += 1;
+            }
+            else if (number < 0) {
+                countNegative += 1;
+            } else {
+                countZero += 1;
+            }
+
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+
+        } while (choice == 'y' || choice == 'N');
 
         System.out.println("Positive numbers: " + countPositive);
         System.out.println("Negative numbers: " + countNegative);
@@ -220,11 +297,26 @@ public class Task3 {
 
         char choice;
 
-        // TODO: Your code here
+        do {
+            System.out.print("Enter the number: ");
+            number = console.nextInt();
+
+            if(number > max ){
+                max = number;
+            }
+            else if (number < min){
+                min = number;
+            }
+
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+
+        } while (choice == 'y' || choice == 'Y');
 
         System.out.println("Largest number: " + max);
         System.out.println("Smallest number: " + min);
     }
+        
 
 
     /* TODO: Question 12
@@ -258,7 +350,12 @@ public class Task3 {
 
         System.out.print(firstTerm + " " + secondTerm + " ");
 
-        // TODO: Your code here
+            for(int i =  2; i < number; i++) {
+                thirdTerm = firstTerm + secondTerm;
+                    System.out.print(thirdTerm + " ");
+                firstTerm = secondTerm;
+                secondTerm = thirdTerm;
+        }
     }
 
 
@@ -276,8 +373,9 @@ public class Task3 {
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
 
-        // TODO: Your code here
-
+            for (int i = 1; i < number; i++){
+                sum = sum + 1/number;
+            }
         System.out.println("sum: " + sum);
     }
 
@@ -298,8 +396,22 @@ public class Task3 {
         System.out.println("Guess My Number Game");
         System.out.println();
 
-        // TODO: Your code here
-    }
+            Random random = new Random();
+            number = random.nextInt(22);
+            System.out.println("Enter a number up to 22");
+            guess = console.nextInt();
+            tries++;
+            while (guess != number) {
+                if (guess > number) {
+                    System.out.println("Too high, try again.");
+                } else {
+                    System.out.println("Too low, try again.");
+                }
+                guess = console.nextInt();
+                tries++;
+            }
+            System.out.println("You could guess the number in " + tries + " tries");
+            }
 
 }
 
