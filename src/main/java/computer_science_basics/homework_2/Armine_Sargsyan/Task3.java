@@ -4,37 +4,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Task3 {
-    public static void main(String[] args) {
-        printNumbers(10);
-        /*System.out.println();
-        printNumbers(15);
-        System.out.println();
-        sumNumbers();
-        table();
-        factorialDemo1();
-        powerDemo();
-        reverseNumber();
-        readSetIntegers();
-        testPrime();
-        FindHcf();
-        sumAgain();
-        countNumbers();
-        findMaxMin();
-        armstrongNumber();
-        fibonacciSeries();
-        SumOfSeries();
-        guessMyNumber();*/
 
-    }
     /* TODO: Question 1
         Write a program to print numbers from 1 to given parameter.
     */
-        public static void printNumbers(int count) {
-            for (int i = 1; i < count ; i++) {
-                System.out.print(i + ", ");
-            }
-
+    public static void printNumbers(int count) {
+        for (int i = 1; i < count; i++) {
+            System.out.print(i + ", ");
         }
+
+    }
 
     /* TODO: Question 2
         Write a program to calculate the sum of first 10 natural numbers.
@@ -42,9 +21,9 @@ public class Task3 {
     public static void sumNumbers() {
         int sum = 0;
 
-        for (int i = 1; i < 10 ; i++) {
+        for (int i = 1; i < 10; i++) {
             sum = sum + i;
-       //  or >>> sum += i;
+            //  or >>> sum += i;
         }
         System.out.println("Sum: " + sum);
     }
@@ -63,7 +42,7 @@ public class Task3 {
 
         System.out.println("Multiplication Table of " + num);
 
-        for (int i = 0; i <= 10 ; i++) {
+        for (int i = 0; i <= 10; i++) {
             System.out.println(num + " x " + i + " = " + (num * i));
 
         }
@@ -81,7 +60,7 @@ public class Task3 {
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
 
-        for (int i = 1; i <= num ; i++) {
+        for (int i = 1; i <= num; i++) {
             fact *= i;
         }
         System.out.println("Factorial: " + fact);
@@ -126,7 +105,7 @@ public class Task3 {
         System.out.print("Enter the number ");
         number = console.nextInt();
 
-            for(;number != 0; number /= 10) {
+        for (; number != 0; number /= 10) {
             int digit = number % 10;
             reverse = reverse * 10 + digit;
         }
@@ -150,11 +129,11 @@ public class Task3 {
             System.out.print("Enter the number ");
             number = console.nextInt();
 
-                if(number % 2 == 0){
-                    evenSum += number;
-                } else {
-                    oddSum += number;
-                }
+            if (number % 2 == 0) {
+                evenSum += number;
+            } else {
+                oddSum += number;
+            }
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
@@ -177,22 +156,23 @@ public class Task3 {
         System.out.print("Enter the positive integer ");
         number = console.nextInt();
 
-        int m, flag=0;
-        m=number/2;
-        if(number == 0||number == 1){
-            System.out.println(number +" is not prime number");
-        }else{
-            for(int i=2; i<=m; i++){
-                if(number%i == 0){
-                    System.out.println(number +" is not prime number");
-                    flag=1;
+        int m, flag = 0;
+        m = number / 2;
+        if (number == 0 || number == 1) {
+            System.out.println(number + " is not prime number");
+        } else {
+            for (int i = 2; i <= m; i++) {
+                if (number % i == 0) {
+                    System.out.println(number + " is not prime number");
+                    flag = 1;
                     break;
                 }
             }
-            if(flag==0)  { System.out.println(number +" is prime number"); }
+            if (flag == 0) {
+                System.out.println(number + " is prime number");
+            }
         }
     }
-
 
 
     /* TODO: Question 8
@@ -210,8 +190,8 @@ public class Task3 {
         System.out.print("Enter the second number ");
         divisor = console.nextInt();
 
-        for(remainder = 1; remainder <= dividend || remainder <= divisor; remainder++) {
-            if( dividend%remainder == 0 && divisor%remainder == 0 )
+        for (remainder = 1; remainder <= dividend || remainder <= divisor; remainder++) {
+            if (dividend % remainder == 0 && divisor % remainder == 0)
                 hcf = remainder;
         }
 
@@ -241,7 +221,8 @@ public class Task3 {
             System.out.println("Do you want to continue? y/n");
             choice = console.next().charAt(0);
 
-        } while (choice == 'y' || choice == 'Y');    }
+        } while (choice == 'y' || choice == 'Y');
+    }
 
 
     /* TODO: Question 10
@@ -263,10 +244,9 @@ public class Task3 {
             System.out.print("Enter the number: ");
             number = console.nextInt();
 
-            if(number > 0){
+            if (number > 0) {
                 countPositive += 1;
-            }
-            else if (number < 0) {
+            } else if (number < 0) {
                 countNegative += 1;
             } else {
                 countZero += 1;
@@ -301,10 +281,9 @@ public class Task3 {
             System.out.print("Enter the number: ");
             number = console.nextInt();
 
-            if(number > max ){
+            if (number > max) {
                 max = number;
-            }
-            else if (number < min){
+            } else if (number < min) {
                 min = number;
             }
 
@@ -316,7 +295,6 @@ public class Task3 {
         System.out.println("Largest number: " + max);
         System.out.println("Smallest number: " + min);
     }
-        
 
 
     /* TODO: Question 12
@@ -327,10 +305,25 @@ public class Task3 {
     public static void armstrongNumber() {
         int digit1,  // To hold first digit (Ones) of number
                 digit2,  // To hold second digit (Tens) of number
-                digit3;  // To hold third digit (Hundreds) of number
+                   digit3;  // To hold third digit (Hundreds) of number
+        int i=1,n,armstrong;
+        System.out.println("Armstrong numbers between 1 to 500 are ");
+        while(i<500){
+            n=i;
+            armstrong  = 0;
+            while (n > 0){
 
-        // TODO: Your code here
+           //   Another version
+                digit1 = digit2 = digit3 = n%10 ;
+                armstrong = armstrong + digit1*digit2*digit3;
+                n=n/10;
+            }
+            if (armstrong==i)
+                System.out.println(i);
+                i++;
+        }
     }
+
 
     /* TODO: Question 13
         Write a program to print Fibonacci series of n terms where n is input by user :
