@@ -1,5 +1,6 @@
 package computer_science_basics.homework_2;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Task3 {
@@ -9,7 +10,9 @@ public class Task3 {
     */
     public static void printNumbers(int count) {
 
-        // TODO: Your code here
+        for (int i = 0; i < count; i++) {
+            System.out.println(i);
+        }
 
     }
 
@@ -19,7 +22,9 @@ public class Task3 {
     public static void sumNumbers() {
         int sum = 0;
 
-        // TODO: Your code here
+        for (int i = 0; i < 10; ++i) {
+            sum += i;
+        }
 
         System.out.println("Sum: " + sum);
     }
@@ -37,8 +42,10 @@ public class Task3 {
         num = console.nextInt();
 
         System.out.println("Multiplication Table of " + num);
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(num + "" + i + (num * i));
+        }
 
-        // TODO: Your code here
     }
 
 
@@ -53,7 +60,9 @@ public class Task3 {
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
 
-        // TODO: Your code here
+        for (int i = 0; i <= num; i++) {
+            fact *= i;
+        }
 
         System.out.println("Factorial: " + fact);
     }
@@ -77,7 +86,9 @@ public class Task3 {
         System.out.print("Enter the power ");
         power = console.nextInt();
 
-        // TODO: Your code here
+        for (int i = 0; i < power; i++) {
+            result *= base;
+        }
 
         System.out.println("Result: " + result);
     }
@@ -116,8 +127,11 @@ public class Task3 {
         do {
             System.out.print("Enter the number ");
             number = console.nextInt();
-
-            // TODO: Your code here
+            if (number % 2 == 1) {
+                oddSum += number;
+            } else {
+                evenSum += number;
+            }
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
@@ -140,7 +154,11 @@ public class Task3 {
         System.out.print("Enter the positive integer ");
         number = console.nextInt();
 
-        // TODO: Your code here
+        for (int i = 2; i < number; i++) {
+            if (i % 2 == 0) {
+                System.out.println("This is prime number");
+            }
+        }
 
     }
 
@@ -160,7 +178,6 @@ public class Task3 {
         System.out.print("Enter the second number ");
         divisor = console.nextInt();
 
-        // TODO: Your code here
 
         System.out.println("HCF: " + hcf);
     }
@@ -177,10 +194,24 @@ public class Task3 {
         Scanner console = new Scanner(System.in);
 
         int number1, number2;
-        char choice;
+        char choice = 0;
 
-        // TODO: Your code here
+        do {
+            System.out.println("please input first number ");
+            number1 = console.nextInt();
+
+            System.out.println("please input next number");
+            number2 = console.nextInt();
+
+            System.out.println("Sum =" + (number1 + number2));
+
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
     }
+
+
+
 
 
     /* TODO: Question 10
@@ -196,9 +227,21 @@ public class Task3 {
                 countNegative = 0,
                 countZero = 0;
 
-        char choice;
+        char choice = 0;
 
-        // TODO: Your code here
+        do {
+
+            System.out.println("please input number");
+            number = console.nextInt();
+            if (number == 0) {
+                countPositive++;
+            } else if (number > 0) {
+                countNegative++;
+            } else {
+                countZero++;
+            }
+
+        } while (choice == 'y' || choice == 'Y');
 
         System.out.println("Positive numbers: " + countPositive);
         System.out.println("Negative numbers: " + countNegative);
@@ -214,13 +257,22 @@ public class Task3 {
     public static void findMaxMin() {
         Scanner console = new Scanner(System.in);
 
-        int number;
+        int number = 0;
         int max = Integer.MIN_VALUE;  // Intialize max with minimum value
         int min = Integer.MAX_VALUE;  // Intialize min with maximum value
-
         char choice;
+        System.out.println("please input number");
+        do {
+            if (number > max) {
+                max = number;
+            }
+            if (number < min) {
+                min = number;
+            }
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
 
-        // TODO: Your code here
 
         System.out.println("Largest number: " + max);
         System.out.println("Smallest number: " + min);
@@ -258,7 +310,10 @@ public class Task3 {
 
         System.out.print(firstTerm + " " + secondTerm + " ");
 
-        // TODO: Your code here
+        for (int i = 0; i <= number; i++) {
+            thirdTerm = firstTerm + secondTerm;
+            System.out.println(thirdTerm);
+        }
     }
 
 
@@ -298,8 +353,21 @@ public class Task3 {
         System.out.println("Guess My Number Game");
         System.out.println();
 
-        // TODO: Your code here
-    }
+        number = new Random().nextInt();
 
+
+        do {
+            System.out.println("Please input number");
+            guess = console.nextInt();
+            if (number > guess) {
+                System.out.println("Too high,try again");
+
+            }
+            if (number < tries) {
+                System.out.println("Too low, try again.");
+            }
+            tries++;
+        } while (number != guess);
+    }
 }
 
