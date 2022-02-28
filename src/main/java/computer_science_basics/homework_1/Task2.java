@@ -15,10 +15,7 @@ public class Task2 {
     }
 
     public static int findSingleNumber(int[] array) {
-        int singleNumber = array[0];
-        for (int i = 1; i < array.length ; i++) {
-            singleNumber ^= array[i];
-        }
-        return singleNumber;
+        // TODO: Your code here
+        return 0;
     }
 }
