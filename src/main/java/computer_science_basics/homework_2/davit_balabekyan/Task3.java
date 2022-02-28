@@ -1,6 +1,5 @@
 package computer_science_basics.homework_2.davit_balabekyan;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Task3 {
@@ -9,7 +8,6 @@ public class Task3 {
         Write a program to print numbers from 1 to given parameter.
     */
     public static void printNumbers(int count) {
-
         for (int i = 1; i <= count; i++) {
             System.out.println(i);
         }
@@ -19,13 +17,10 @@ public class Task3 {
         Write a program to calculate the sum of first 10 natural numbers.
     */
     public static void sumNumbers() {
-
         int sum = 0;
-
         for (int i = 1; i <= 10; i++) {
             sum += i;
         }
-
         System.out.println("Sum: " + sum);
     }
 
@@ -57,7 +52,6 @@ public class Task3 {
     */
     public static void factorialDemo1() {
         Scanner console = new Scanner(System.in);
-
         int num; // To hold number
         int fact = 1; // To hold factorial
 
@@ -69,7 +63,6 @@ public class Task3 {
                 fact *= i;
             }
         }
-
         System.out.println("Factorial: " + fact);
     }
 
@@ -108,7 +101,6 @@ public class Task3 {
                 result = -result;
             }
         }
-
         System.out.println("Result: " + result);
     }
 
@@ -126,7 +118,7 @@ public class Task3 {
         givenNumber = console.nextInt();
         number = givenNumber;
 
-        while (givenNumber != 0) {
+        while (givenNumber > 0) {
             remainder = givenNumber % 10;
             reverse = reverse * 10 + remainder;
             givenNumber /= 10;
@@ -150,11 +142,13 @@ public class Task3 {
         do {
             System.out.print("Enter the number ");
             number = console.nextInt();
+
             if (number % 2 == 0) {
                 evenSum += number;
             } else {
                 oddSum += number;
             }
+
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
         } while (choice == 'y' || choice == 'Y');
@@ -243,7 +237,7 @@ public class Task3 {
             number2 = console.nextInt();
 
             sum = number1 + number2;
-            System.out.println(sum);
+            System.out.println("Sum of numbers: " + sum);
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
@@ -263,12 +257,12 @@ public class Task3 {
         do {
             System.out.print("Enter the number ");
             number = console.nextInt();
-            if (number == 0) {
-                countZero++;
-            } else if (number > 0) {
+            if (number > 0) {
                 countPositive++;
-            } else {
+            } else if (number < 0) {
                 countNegative++;
+            } else {
+                countZero++;
             }
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
@@ -287,34 +281,25 @@ public class Task3 {
         Scanner console = new Scanner(System.in);
 
         int number;
-        int max;
-        int min;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
 
         char choice;
-
-        ArrayList<Integer> list = new ArrayList<>();
 
         do {
             System.out.print("Enter the number ");
             number = console.nextInt();
 
-            list.add(number);
+            if(number > max){
+                max = number;
+            }
+            if(number < min){
+                min = number;
+            }
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
         } while (choice == 'y' || choice == 'Y');
-
-        max = list.get(0);
-        min = list.get(0);
-
-        for (int i = 1; i < list.size(); i++) {
-            if (max < list.get(i)) {
-                max = list.get(i);
-            }
-            if (min > list.get(i)) {
-                min = list.get(i);
-            }
-        }
 
         System.out.println("Largest number: " + max);
         System.out.println("Smallest number: " + min);
@@ -330,20 +315,18 @@ public class Task3 {
                 digit2,  // To hold second digit (Tens) of number
                 digit3;  // To hold third digit (Hundreds) of number
 
-        ArrayList<Integer> armstrongNumbers = new ArrayList<>();
-
         for (int i = 1; i <= 500; i++) {
             if (i < 10) {
-                digit1 = (int) Math.pow(i, 3);
+                digit1 = (int) Math.pow(i, 1);
                 if (digit1 == i) {
-                    armstrongNumbers.add(i);
+                    System.out.println(i);
                 }
             } else if (i < 100) {
                 digit2 = i % 10;
                 digit1 = (i - digit2) / 10;
-                int sum = (int) (Math.pow(digit1, 3) + Math.pow(digit2, 3));
+                int sum = (int) (Math.pow(digit1, 2) + Math.pow(digit2, 2));
                 if (sum == i) {
-                    armstrongNumbers.add(i);
+                    System.out.println(i);
                 }
             } else {
                 digit3 = i % 10;
@@ -351,13 +334,9 @@ public class Task3 {
                 digit1 = ((i - digit3) / 10) / 10;
                 int sum = (int) (Math.pow(digit1, 3) + Math.pow(digit2, 3) + Math.pow(digit3, 3));
                 if (sum == i) {
-                    armstrongNumbers.add(i);
+                    System.out.println(i);
                 }
             }
-        }
-
-        for (Integer armstrongNumber : armstrongNumbers) {
-            System.out.print(armstrongNumber + " ");
         }
     }
 
@@ -375,9 +354,9 @@ public class Task3 {
         System.out.print("Enter number te forms of series : ");
         number = console.nextInt();
 
-        for (int i = 1; i <= number; i++) {
-            System.out.print(firstTerm + " ");
+        for (int i = 3; i <= number; i++) {
             thirdTerm = firstTerm + secondTerm;
+            System.out.print(thirdTerm + " ");
             firstTerm = secondTerm;
             secondTerm = thirdTerm;
         }
@@ -391,12 +370,12 @@ public class Task3 {
         Scanner console = new Scanner(System.in);
 
         double number;  // To hold number of terms
-        double sum = 1;
+        double sum = 0;
 
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
 
-        for (int i = 2; i <= number; i++) {
+        for (int i = 1; i <= number; i++) {
             sum += 1.0 / i;
         }
 
@@ -418,7 +397,8 @@ public class Task3 {
 
         number = (int) (Math.random() * 100);
 
-        System.out.println("Guess My Number Game");
+        System.out.println("Enter a guess between 1 and 100 : ");
+
 
         do {
             guess = console.nextInt();
