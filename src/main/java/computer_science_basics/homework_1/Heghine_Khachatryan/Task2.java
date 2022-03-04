@@ -1,4 +1,4 @@
-package computer_science_basics.homework_1.Lilit_Manukyan;
+package computer_science_basics.homework_1.Heghine_Khachatryan;
 
 public class Task2 {
 
@@ -15,14 +15,10 @@ public class Task2 {
     }
 
     public static int findSingleNumber(int[] array) {
-
-        int singleNumber = array[0];
-        
-        for (int i = 1; i < array.length ; i++) {
-            singleNumber ^= array[i];
+        int x = 0;
+        for (int element : array) {
+            x = x ^ element;
         }
-        
-        return singleNumber;   
-
+        return x;
     }
 }

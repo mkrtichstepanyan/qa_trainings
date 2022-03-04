@@ -1,6 +1,6 @@
-package computer_science_basics.homework_1.Lilit_Manukyan;
+package computer_science_basics.homework_1.solutions;
 
-public class Task2 {
+public class Task2Solutions {
 
     /* TODO: Task 2
         Given an array of integers ex. [1, 4, -7, 0, 4, -7, 0 ]
@@ -10,19 +10,15 @@ public class Task2 {
     */
 
     public static void main(String[] args) {
-        int[] twinsArray = {4, 2, 5, -4, 3, 0, 3, 6, 1, 8, -2, -2, -3, -6, -3, -6, 5, 4, 2, -1, -5, 0, 6, -1, 1, -5, -4};
+        int[] twinsArray = {4, 2, 5, -4, 3, 0, 3, 6, 1, 7, -2, -2, -3, -6, -3, -6, 5, 4, 2, -1, -5, 0, 6, -1, 1, -5, -4};
         System.out.println("The single number is -> " + findSingleNumber(twinsArray));
     }
 
     public static int findSingleNumber(int[] array) {
-
-        int singleNumber = array[0];
-        
-        for (int i = 1; i < array.length ; i++) {
-            singleNumber ^= array[i];
+        int result = 0;
+        for (int j : array) {
+            result ^= j;
         }
-        
-        return singleNumber;   
-
+        return result;
     }
 }
