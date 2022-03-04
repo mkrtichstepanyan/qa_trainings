@@ -1,5 +1,6 @@
-package computer_science_basics.homework_2;
+package computer_science_basics.homework_2.Heghine_Khachatryan;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Task3 {
@@ -8,8 +9,10 @@ public class Task3 {
         Write a program to print numbers from 1 to given parameter.
     */
     public static void printNumbers(int count) {
-
-        // TODO: Your code here
+        for (int i = 1; i <= count; i++) {
+            System.out.printf("%2d |", i);
+        }
+        System.out.println(" <----- numbers are printed");
     }
 
     /* TODO: Question 2
@@ -18,9 +21,10 @@ public class Task3 {
     public static void sumNumbers() {
         int sum = 0;
 
-        // TODO: Your code here
-
-        System.out.println("Sum: " + sum);
+        for (int i = 1; i < 11; i++) {
+            sum += i;
+        }
+        System.out.println("Sum of the first 10 natural numbers is: " + sum);
     }
 
 
@@ -31,12 +35,16 @@ public class Task3 {
     public static void table() {
         Scanner console = new Scanner(System.in);
         int num;
-        int sum;
 
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
 
-        // TODO: Your code here
+        System.out.println("Multiplication Table of " + num);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("|%d| * |%d| =|%2d|", i, num, i * num);
+            System.out.println();
+        }
     }
 
 
@@ -51,8 +59,23 @@ public class Task3 {
         System.out.print("Enter any positive integer: ");
         num = console.nextInt();
 
-        // TODO: Your code here
-
+        if (num == 0 || num == 1) {
+            System.out.println("Factorial of number " + num + " is: " + fact);
+            return;
+        } else if (num > 1) {
+            while (num != 1) {
+                fact = fact * (num);
+                num -= 1;
+            }
+        } else {
+            while (num != 0) {
+                fact *= num;
+                num += 1;
+            }
+            if (fact > 0) {
+                fact *= (-1);
+            }
+        }
         System.out.println("Factorial: " + fact);
     }
 
@@ -67,17 +90,26 @@ public class Task3 {
 
         int base;
         int power;
-        int result = 1;
+        double result = 1;
 
         System.out.print("Enter the base number ");
         base = console.nextInt();
 
         System.out.print("Enter the power ");
         power = console.nextInt();
-
-
-        // TODO: Your code here
-
+        if (power == 0) {
+            System.out.println("Result: " + result);
+            return;
+        } else if (power > 0) {
+            for (int i = power; i > 0; i--) {
+                result *= base;
+            }
+        } else {
+            for (int i = power; i < 0; i++) {
+                result *= base;
+            }
+            result = 1 / result;
+        }
         System.out.println("Result: " + result);
     }
 
@@ -94,10 +126,15 @@ public class Task3 {
 
         System.out.print("Enter the number ");
         number = console.nextInt();
+        int numberToReverse = number;
+        int reminder;
+        while (number != 0) {
+            reminder = number % 10;
+            number /= 10;
+            reverse = reverse * 10 + reminder;
+        }
 
-        // TODO: Your code here
-
-        System.out.println("Reverse of " + number + " is " + reverse);
+        System.out.println("Reverse of " + numberToReverse + " is " + reverse);
     }
 
     /* TODO: Question 6
@@ -116,11 +153,14 @@ public class Task3 {
             System.out.print("Enter the number ");
             number = console.nextInt();
 
-            // TODO: Your code here
+            if ((number % 2) == 0) {
+                evenSum += number;
+            } else {
+                oddSum += number;
+            }
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
-
 
         } while (choice == 'y' || choice == 'Y');
 
@@ -132,7 +172,7 @@ public class Task3 {
         Write a program that prompts the user to input a positive integer.
         It should then output a message indicating whether the number is a prime number.
     */
-    public static void testPrime() {
+    public static void testPrime() { // The method checks numbers from 1 to 1601
         Scanner console = new Scanner(System.in);
 
         int number;
@@ -140,7 +180,41 @@ public class Task3 {
         System.out.print("Enter the positive integer ");
         number = console.nextInt();
 
-        // TODO: Your code here
+        boolean isPrime = false;
+
+        if (number <= 40) {
+            // formula 6n - 1 or 6n + 1
+            for (int i = 1; i < 40; i++) {
+                if (number != 2 && number % 2 == 0) {
+                    break;
+                }
+                int num = 6 * i - 1;
+                int num1 = 6 * i + 1;
+                if (number == num || number == num1) {
+                    isPrime = true;
+                    System.out.println(number + " is prime");
+                    break;
+                } else if (number < num || number < num1) {
+                    break;
+                }
+            }
+        } else {
+            // formula n^2 + n + 41, where n = 0, 1, 2, ….., 39
+            for (int i = 0; i < 40; i++) {
+                if (number % 2 == 0) {
+                    break;
+                }
+                int num = i * i + i + 41;
+                if (number == num) {
+                    isPrime = true;
+                    System.out.println(number + " is prime");
+                    break;
+                }
+            }
+        }
+        if (!isPrime) {
+            System.out.println(number + " is not prime");
+        }
 
     }
 
@@ -148,7 +222,7 @@ public class Task3 {
     /* TODO: Question 8
         Write a program to calculate HCF of Two given number.
     */
-    public static void FindHcf() {
+    public static void findHcf() {
         Scanner console = new Scanner(System.in);
 
         int dividend, divisor;
@@ -160,8 +234,18 @@ public class Task3 {
         System.out.print("Enter the second number ");
         divisor = console.nextInt();
 
-        // TODO: Your code here
+        if (dividend > divisor) {
+            remainder = dividend % divisor;
+        } else {
+            remainder = divisor % dividend;
+        }
 
+        while (remainder != 0) {
+            dividend = divisor;
+            divisor = remainder;
+            remainder = dividend % divisor;
+        }
+        hcf = divisor;
         System.out.println("HCF: " + hcf);
     }
 
@@ -179,7 +263,16 @@ public class Task3 {
         int number1, number2;
         char choice;
 
-        // TODO: Your code here
+        do {
+            System.out.println("Enter a number:");
+            number1 = console.nextInt();
+            System.out.println("Enter another number: ");
+            number2 = console.nextInt();
+            System.out.println("Sum of " + number1 + " and " + number2 + " is equal to " + (number1 + number2));
+            System.out.println("Do you want to continue? y/n");
+            choice = console.next().charAt(0);
+
+        } while (choice == 'y' || choice == 'Y');
     }
 
 
@@ -191,10 +284,25 @@ public class Task3 {
     public static void countNumbers() {
         Scanner console = new Scanner(System.in);
 
-        int number, countPositive = 0, countNegative = 0, countZero = 0;
-        char choice;
+        int number,
+                countPositive = 0,
+                countNegative = 0,
+                countZero = 0;
 
-        // TODO: Your code here
+        char choice;
+        do {
+            System.out.println("Enter a number:");
+            number = console.nextInt();
+            if (number > 0) {
+                countPositive++;
+            } else if (number < 0) {
+                countNegative++;
+            } else {
+                countZero++;
+            }
+            System.out.println("Do you want to continue? y/n");
+            choice = console.next().charAt(0);
+        } while (choice == 'y' || choice == 'Y');
 
         System.out.println("Positive numbers: " + countPositive);
         System.out.println("Negative numbers: " + countNegative);
@@ -211,12 +319,25 @@ public class Task3 {
         Scanner console = new Scanner(System.in);
 
         int number;
-        int max = Integer.MIN_VALUE;  // Initialize max with minimum value
-        int min = Integer.MAX_VALUE;  // Initializee min with maximum value
+        int max = Integer.MIN_VALUE;  // Intialize max with minimum value
+        int min = Integer.MAX_VALUE;  // Intialize min with maximum value
 
         char choice;
 
-        // TODO: Your code here
+        do {
+            System.out.println("Enter a number:");
+            number = console.nextInt();
+            min = number;
+            System.out.println("Enter a number:");
+            number = console.nextInt();
+            if (number > min) {
+                max = number;
+            } else {
+                min = number;
+            }
+            System.out.println("Do you want to continue? y/n");
+            choice = console.next().charAt(0);
+        } while (choice == 'y' || choice == ('Y'));
 
         System.out.println("Largest number: " + max);
         System.out.println("Smallest number: " + min);
@@ -233,7 +354,16 @@ public class Task3 {
                 digit2,  // To hold second digit (Tens) of number
                 digit3;  // To hold third digit (Hundreds) of number
 
-        // TODO: Your code here
+        for (digit1 = 0; digit1 < 6; digit1++) {
+            for (digit2 = 0; digit2 < 10; digit2++) {
+                for (digit3 = 0; digit3 < 10; digit3++) {
+                    int num = (digit1 * 100) + (digit2 * 10) + digit3;
+                    if (Math.pow(digit1, 3) + Math.pow(digit2, 3) + Math.pow(digit3, 3) == num) {
+                        System.out.println("Armstrong number is: " + num);
+                    }
+                }
+            }
+        }
     }
 
     /* TODO: Question 13
@@ -245,14 +375,21 @@ public class Task3 {
 
         int number;  // To hold number of terms
 
-        int firstTerm = 0, secondTerm = 1, thirdTerm;
+        int firstTerm = 0,
+                secondTerm = 1,
+                thirdTerm;
 
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
 
         System.out.print(firstTerm + " " + secondTerm + " ");
 
-        // TODO: Your code here
+        for (int i = 0; i <= number; i++) {
+            thirdTerm = firstTerm + secondTerm;
+            System.out.println(thirdTerm);
+            firstTerm = secondTerm;
+            secondTerm = thirdTerm;
+        }
     }
 
 
@@ -265,16 +402,22 @@ public class Task3 {
 
         int number;  // To hold number of terms
 
-
         double sum = 0;
-
 
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
 
-        // TODO: Your code here
+        for (int i = 1; i <= number; i++) {
+            String form = 1 + "/" + i + " + ";
+            if (i == number) {
+                System.out.print(form.substring(0, form.length() - 3));
+            } else {
+                System.out.print(form);
+            }
+            sum += (1 / (double) i);
+        }
 
-        System.out.println("sum: " + sum);
+        System.out.println(". The sum is: " + sum);
     }
 
 
@@ -294,7 +437,22 @@ public class Task3 {
         System.out.println("Guess My Number Game");
         System.out.println();
 
-        // TODO: Your code here
-    }
-}
+        Random random = new Random();
+        number = random.nextInt(15);
+        System.out.println("Enter a number up to 15");
+        guess = console.nextInt();
+        tries++;
+        while (guess != number) {
+            if (guess > number) {
+                System.out.println("Too high, try again.");
+            } else {
+                System.out.println("Too low, try again.");
+            }
+            guess = console.nextInt();
+            tries++;
+        }
+        System.out.println("You could guess the number in " + tries + " tries");
 
+    }
+
+}
