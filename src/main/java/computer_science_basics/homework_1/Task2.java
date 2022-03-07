@@ -18,5 +18,7 @@ public class Task2 {
         // TODO: Your code here
         return 0;
     }
+
+    asdasdasdasdasd
 }
 
