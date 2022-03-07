@@ -8,9 +8,9 @@ public class Task3 {
         Write a program to print numbers from 1 to given parameter.
     */
     public static void printNumbers(int count) {
-
-        // TODO: Your code here
-
+        for (int i = 0; i < count; i++) {
+            System.out.println(i);
+        }
     }
 
     /* TODO: Question 2
