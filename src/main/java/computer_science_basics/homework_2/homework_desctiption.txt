@@ -10,10 +10,11 @@ Task 3
     Solve all interesting tasks inside Task3 file
 
 Task 4
-    Generate Public and private keys on your local machines -> Don't need to push them into git.
+
 
 Task 5
-    Use commands  on your local machine  -> ifconfig/ipconfig, mtr/traceroute/tracert, ping
+    Use commands  on your local machine  -> ifconfig/ipconfig
+     Generate Public and private keys on your local machines -> Don't need to push them into git., mtr/traceroute/tracert, ping
 
 After finishing the work
     1. create new folder "name_surname" inside ./computer_science_basics.homework_2
