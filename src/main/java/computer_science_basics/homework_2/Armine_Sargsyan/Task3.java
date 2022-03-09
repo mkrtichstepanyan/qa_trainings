@@ -1,16 +1,41 @@
+<<<<<<< HEAD
 package computer_science_basics.homework_2.Armine_Sargsyan;
 import java.util.Scanner;
 
 public class Task3 {
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+package computer_science_basics.homework_2.solutions;
+=======
+package computer_science_basics.homework_2.Armine_Sargsyan;
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Task3Solutions {
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
 
     /* TODO: Question 1
         Write a program to print numbers from 1 to given parameter.
     */
     public static void printNumbers(int count) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        for (int i = 1; i <= count; i++) {
+            System.out.println(i);
+        }
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         for (int i = 1; i < count; i++) {
             System.out.print(i + ", ");
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
     }
 
     /* TODO: Question 2
@@ -18,10 +43,21 @@ public class Task3 {
     */
     public static void sumNumbers() {
         int sum = 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        for (int i = 1; i <= 10; i++) {
+            sum += i;
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
 
         for (int i = 1; i < 10; i++) {
             sum = sum + i;
             //  or >>> sum += i;
+<<<<<<< HEAD
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         }
         System.out.println("Sum: " + sum);
     }
@@ -40,9 +76,20 @@ public class Task3 {
 
         System.out.println("Multiplication Table of " + num);
 
+<<<<<<< HEAD
         for (int i = 0; i <= 10; i++) {
             System.out.println(num + " x " + i + " = " + (num * i));
 
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+=======
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         }
     }
 
@@ -61,6 +108,13 @@ public class Task3 {
         for (int i = 1; i <= num; i++) {
             fact *= i;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         System.out.println("Factorial: " + fact);
     }
 
@@ -86,6 +140,13 @@ public class Task3 {
         for (int i = 1; i <= power; i++) {
             result *= base;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         System.out.println("Result: " + result);
     }
 
@@ -103,9 +164,25 @@ public class Task3 {
         System.out.print("Enter the number ");
         number = console.nextInt();
 
+<<<<<<< HEAD
         for (; number != 0; number /= 10) {
             int digit = number % 10;
             reverse = reverse * 10 + digit;
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        int temp = number;
+        int remainder = 0;
+
+        while (temp > 0) {
+            remainder = temp % 10;
+            reverse = reverse * 10 + remainder;
+            temp /= 10;
+=======
+        for (; number != 0; number /= 10) {
+            int digit = number % 10;
+            reverse = reverse * 10 + digit;
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         }
 
         System.out.println("Reverse of " + number + " is " + reverse);
@@ -154,6 +231,10 @@ public class Task3 {
         System.out.print("Enter the positive integer ");
         number = console.nextInt();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         boolean flag = true;
 
         for (int i = 2; i < number; i++) {
@@ -169,11 +250,35 @@ public class Task3 {
             System.out.println("Number is not prime");
         }
 
+<<<<<<< HEAD
     }
 
 
 
 
+=======
+=======
+        int m, flag = 0;
+        m = number / 2;
+        if (number == 0 || number == 1) {
+            System.out.println(number + " is not prime number");
+        } else {
+            for (int i = 2; i <= m; i++) {
+                if (number % i == 0) {
+                    System.out.println(number + " is not prime number");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(number + " is prime number");
+            }
+        }
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+    }
+
+
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
     /* TODO: Question 8
         Write a program to calculate HCF of Two given number.
     */
@@ -182,11 +287,22 @@ public class Task3 {
 
         int dividend, divisor;
         int remainder, hcf = 0;
+<<<<<<< HEAD
         System.out.print("Enter the first number ");
         dividend = console.nextInt();
         System.out.print("Enter the second number ");
         divisor = console.nextInt();
 
+=======
+
+        System.out.print("Enter the first number ");
+        dividend = console.nextInt();
+
+        System.out.print("Enter the second number ");
+        divisor = console.nextInt();
+
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         do {
             remainder = dividend % divisor;
 
@@ -196,6 +312,7 @@ public class Task3 {
                 dividend = divisor;
                 divisor = remainder;
             }
+<<<<<<< HEAD
         } while (remainder != 0);
 
         System.out.print("Enter the first number ");
@@ -204,10 +321,19 @@ public class Task3 {
         System.out.print("Enter the second number ");
         divisor = console.nextInt();
 
+=======
+
+        } while (remainder != 0);
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         for (remainder = 1; remainder <= dividend || remainder <= divisor; remainder++) {
             if (dividend % remainder == 0 && divisor % remainder == 0)
                 hcf = remainder;
         }
+<<<<<<< HEAD
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
 
         System.out.println("HCF: " + hcf);
     }
@@ -227,6 +353,25 @@ public class Task3 {
         char choice;
 
         do {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+            System.out.print("Enter the first number ");
+            number1 = console.nextInt();
+
+            System.out.print("Enter the second number ");
+            number2 = console.nextInt();
+
+            int sum = number1 + number2;
+            System.out.println("Sum of numbers: " + sum);
+
+            System.out.print("Do you want to continue y/n? ");
+            choice = console.next().charAt(0);
+
+            System.out.println();
+
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
             System.out.println("Enter the first number:");
             number1 = console.nextInt();
             System.out.println("Enter the second number: ");
@@ -235,6 +380,10 @@ public class Task3 {
             System.out.println("Do you want to continue? y/n");
             choice = console.next().charAt(0);
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         } while (choice == 'y' || choice == 'Y');
     }
 
@@ -255,6 +404,10 @@ public class Task3 {
         char choice;
 
         do {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
             System.out.print("Enter the number ");
             number = console.nextInt();
 
@@ -264,12 +417,34 @@ public class Task3 {
                 countNegative++;
             } else {
                 countZero++;
+<<<<<<< HEAD
+=======
+=======
+            System.out.print("Enter the number: ");
+            number = console.nextInt();
+
+            if (number > 0) {
+                countPositive += 1;
+            } else if (number < 0) {
+                countNegative += 1;
+            } else {
+                countZero += 1;
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
             }
 
             System.out.print("Do you want to continue y/n? ");
             choice = console.next().charAt(0);
 
+<<<<<<< HEAD
         } while (choice == 'y' || choice == 'Y');
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        } while (choice == 'y' || choice == 'Y');
+=======
+        } while (choice == 'y' || choice == 'N');
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
 
         System.out.println("Positive numbers: " + countPositive);
         System.out.println("Negative numbers: " + countNegative);
@@ -277,11 +452,18 @@ public class Task3 {
     }
 
 
+<<<<<<< HEAD
 
      /* TODO: Question 11
          Write a program to enter the numbers till the user wants and
          at the end the program should display the largest and smallest numbers entered.
      */
+=======
+     /* TODO: Question 11
+         Write a program to enter the numbers till the user wants and
+         at the end the program should display the largest and smallest numbers entered.
+    */
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
 
     public static void findMaxMin() {
         Scanner console = new Scanner(System.in);
@@ -293,12 +475,30 @@ public class Task3 {
         char choice;
 
         do {
+<<<<<<< HEAD
             System.out.print("Enter the number: ");
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+            System.out.print("Enter the number ");
+=======
+            System.out.print("Enter the number: ");
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
             number = console.nextInt();
 
             if (number > max) {
                 max = number;
+<<<<<<< HEAD
             } else if (number < min) {
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+            }
+
+            if (number < min) {
+=======
+            } else if (number < min) {
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
                 min = number;
             }
 
@@ -320,6 +520,10 @@ public class Task3 {
     public static void armstrongNumber() {
         int digit1,  // To hold first digit (Ones) of number
                 digit2,  // To hold second digit (Tens) of number
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
                 digit3;  // To hold third digit (Hundreds) of number
 
         for (int number = 1; number <= 500; number++) {
@@ -335,6 +539,27 @@ public class Task3 {
             if (digit1 * digit1 * digit1 + digit2 * digit2 * digit2 + digit3 * digit3 * digit3 == number) {
                 System.out.println(number);
             }
+<<<<<<< HEAD
+=======
+=======
+                   digit3;  // To hold third digit (Hundreds) of number
+        int i=1,n,armstrong;
+        System.out.println("Armstrong numbers between 1 to 500 are ");
+        while(i<500){
+            n=i;
+            armstrong  = 0;
+            while (n > 0){
+
+           //   Another version
+                digit1 = digit2 = digit3 = n%10 ;
+                armstrong = armstrong + digit1*digit2*digit3;
+                n=n/10;
+            }
+            if (armstrong==i)
+                System.out.println(i);
+                i++;
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         }
     }
 
@@ -357,20 +582,43 @@ public class Task3 {
 
         System.out.print(firstTerm + " " + secondTerm + " ");
 
+<<<<<<< HEAD
         for (int i = 3; i < number; i++) {
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        for (int i = 3; i <= number; i++) {
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
             thirdTerm = firstTerm + secondTerm;
             System.out.print(thirdTerm + " ");
             firstTerm = secondTerm;
             secondTerm = thirdTerm;
+<<<<<<< HEAD
 
         }
     }
 
+=======
+=======
+            for(int i =  2; i < number; i++) {
+                thirdTerm = firstTerm + secondTerm;
+                    System.out.print(thirdTerm + " ");
+                firstTerm = secondTerm;
+                secondTerm = thirdTerm;
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+        }
+    }
+
+
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
     /* TODO: Question 14
         Write a program to calculate the sum of following series where n is input by user.
         1 + 1/2 + 1/3 + 1/4 + 1/5 +…………1/n
     */
+<<<<<<< HEAD
     public static void SumOfSeries () {
+=======
+    public static void SumOfSeries() {
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         Scanner console = new Scanner(System.in);
 
         int number;  // To hold number of terms
@@ -380,10 +628,22 @@ public class Task3 {
         System.out.print("Enter number of terms of series : ");
         number = console.nextInt();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         for (int i = 1; i <= number; i++) {
             sum += 1.0 / i;
         }
 
+<<<<<<< HEAD
+=======
+=======
+            for (int i = 1; i < number; i++){
+                sum = sum + 1/number;
+            }
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
         System.out.println("sum: " + sum);
     }
 
@@ -406,9 +666,34 @@ public class Task3 {
         System.out.println("Guess My Number Game");
         System.out.println();
 
+<<<<<<< HEAD
         do {
             System.out.print("Enter a guess between 1 and 100 : ");
             guess = console.nextInt();
+=======
+<<<<<<< HEAD:src/main/java/computer_science_basics/homework_2/solutions/Task3Solutions.java
+        do {
+            System.out.print("Enter a guess between 1 and 100 : ");
+            guess = console.nextInt();
+=======
+            Random random = new Random();
+            number = random.nextInt(22);
+            System.out.println("Enter a number up to 22");
+            guess = console.nextInt();
+            tries++;
+            while (guess != number) {
+                if (guess > number) {
+                    System.out.println("Too high, try again.");
+                } else {
+                    System.out.println("Too low, try again.");
+                }
+                guess = console.nextInt();
+                tries++;
+            }
+            System.out.println("You could guess the number in " + tries + " tries");
+            }
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61:src/main/java/computer_science_basics/homework_2/Armine_Sargsyan/Task3.java
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
 
             tries++;
 
@@ -423,3 +708,7 @@ public class Task3 {
         } while (guess != number);
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
