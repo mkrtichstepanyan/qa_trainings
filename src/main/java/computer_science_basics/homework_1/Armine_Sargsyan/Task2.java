@@ -18,13 +18,7 @@ public class Task2 {
         for (int element : array) {
             a = a ^ element;
         }
-<<<<<<< HEAD
         return a;
     }
 }
-=======
-            return a;
-    }
-}
 
->>>>>>> 4814ec835e465713c58d4c5b744997fb5b251e61
