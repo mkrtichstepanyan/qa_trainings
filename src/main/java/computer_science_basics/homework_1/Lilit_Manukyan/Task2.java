@@ -15,7 +15,7 @@ public class Task2 {
     }
 
     public static int findSingleNumber(int[] array) {
-    
+
         int singleNumber = array[0];
         
         for (int i = 1; i < array.length ; i++) {
@@ -23,6 +23,6 @@ public class Task2 {
         }
         
         return singleNumber;   
-          
+
     }
 }
