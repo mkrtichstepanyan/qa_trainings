@@ -1,4 +1,4 @@
-package arrays.homework_3;
+package arrays.homework_3.Arevik_Arakelyan;
 import java.util.Arrays;
 
 public class SortingAlgorithms {
