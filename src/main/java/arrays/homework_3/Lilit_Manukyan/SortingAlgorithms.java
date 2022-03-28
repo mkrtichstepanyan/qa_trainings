@@ -23,7 +23,7 @@ public class SortingAlgorithms {
         System.out.println();
         System.out.println("----------------");
     }
-    // 1. Insertion Sort
+    
     public static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; ++i) {
             int flag = arr[i];
@@ -35,7 +35,7 @@ public class SortingAlgorithms {
             arr[j + 1] = flag;
         }
     }
-    // 2. Selection sort
+   
     public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
             {
@@ -51,7 +51,7 @@ public class SortingAlgorithms {
             }
         }
     }
-    //3. Bubble sort
+    
     public static void bubbleSort(int [] arr) {
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = 1; j < arr.length-i; j++) {
@@ -64,8 +64,3 @@ public class SortingAlgorithms {
         }
     }
 }
-
-
-
-
-
