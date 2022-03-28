@@ -4,7 +4,7 @@ Read From Java 8 book till the 5-th chapter
 EPAM Learn
 
 
-Write Algorithms in the ./arrays.homework_3.heghine_khachatryan.SortingAlgorithms.java file
+Write Algorithms in the ./arrays.homework_3.SortingAlgorithms.java file
 
 After finishing the work
     1. create new folder "name_surname" inside ./arrays.homework_3
