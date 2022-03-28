@@ -1,7 +1,5 @@
 package arrays.homework_3.Lilit_Manukyan;
-
 import java.lang.reflect.Array;
-
 public class SortingAlgorithms {
     public static void main(String[] args) {
         int[] array = {7, 8, -55, 2, 4, 0, -3};
@@ -12,15 +10,12 @@ public class SortingAlgorithms {
         printArray(array2);
         bubbleSort(array);
         printArray(array);
-
-
     }
    /* TODO: Write algorithms below
        1. Insertion Sort
        2. Selection Sort
        3. Bubble Sort
     */
-
     public static void printArray(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -28,16 +23,11 @@ public class SortingAlgorithms {
         System.out.println();
         System.out.println("----------------");
     }
-
     // 1. Insertion Sort
-
     public static void insertionSort(int[] arr) {
-
         for (int i = 1; i < arr.length; ++i) {
             int flag = arr[i];
             int j = i - 1;
-
-
             while (j >= 0 && arr[j] > flag) {
                 arr[j + 1] = arr[j];
                 j = j - 1;
@@ -45,7 +35,6 @@ public class SortingAlgorithms {
             arr[j + 1] = flag;
         }
     }
-
     // 2. Selection sort
     public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
@@ -62,7 +51,6 @@ public class SortingAlgorithms {
             }
         }
     }
-
     //3. Bubble sort
     public static void bubbleSort(int [] arr) {
         for (int i = 0; i < arr.length-1; i++) {
@@ -72,9 +60,7 @@ public class SortingAlgorithms {
                     arr[j-1] = arr[j];
                     arr[j] = temp;
                 }
-
             }
-
         }
     }
 }
