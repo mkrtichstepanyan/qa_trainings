@@ -1,0 +1,40 @@
+  Reading
+Read from java 8 book chapter about Inheritance (chapter 8, may be different in other editions)
+
+EPAM Learn
+Complete tasks and learning materials referring to Inheritance, overloading and overriding mechanisms
+
+CODING TASK
+
+A. OVERLOADING
+1. Create class Calculations create method getMean(Arguments) (միջին թվաբանական)
+    The method should
+    1.1. Work with any number of int, double, float parameters(using method overloading)
+    and return arithmetic mean (միջին թվաբանական) for provided numbers in parameters
+    1.2 If String is provided as a parameter it should return concatenation of all Strings
+    e. g. if provided parameters are "Happy", "New", "Year" it should return "HappyNewYear"
+
+    Create examples of calls in class Math
+
+B. INHERITANCE AND OVERRIDING
+1. Create 3 classes: Staff(abstract), Developer(extends Staff) and QualityEngineer(extends Staff)
+2. Staff should have fields Name, Surname, static field company(String, can be predefined), methods getName/LastName
+setName/LastName(String parameter), abstract method doWork, static method getCompany
+3. Developer should extend class Staff, have field techstack (String field, java, php etc), doWork implementation should
+print developers name and tech stack, setters and getters for all fields
+4. QualityEngineer should extend class Staff, have field type(String field manual/automation/security etc), doWork implementation
+should print engineer's name and type
+5. For both classes getCompany method's output should be "{developer/engineerName} is from: "companyName"}"
+
+Create instances of both classes in separate class Work under function main
+
+MARKING CRITERIA
+1. Minimum possible access modifier is used for each field/method
+2. Getters and setters are created for all possible fields
+3. Methods mentioned above should have their calls in Math/Work classes
+
+After finishing the work
+1. Create new folder "name_surname" inside ./javaClasses.homework_4
+2. Copy create class and classes "Work" "Math" into that folder
+3. Create new branch "<name>_<surname>_java_classes_homework_4"
+4. Create Pull Request/Merge Request and assign to Volodya Kotsinyan(volodya11) or Mkrtich Stepanyan

@@ -1,4 +1,4 @@
-package volodyaLesson.overloading;
+package javaClasses.overloading;
 
 public class Sphere extends Shape {
 

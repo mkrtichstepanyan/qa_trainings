@@ -1,6 +1,6 @@
-package volodyaLesson.overloading;
+package javaClasses.overloading;
 
-import static volodyaLesson.overloading.VarargAmbiguos.enumeration;
+import static javaClasses.overloading.VarargAmbiguos.enumeration;
 
 public class SimpleOverloading {
 

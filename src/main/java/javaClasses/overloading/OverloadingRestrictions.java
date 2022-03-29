@@ -1,4 +1,4 @@
-package volodyaLesson.overloading;
+package javaClasses.overloading;
 
 /**
  * Class with methods that can cause problems during overloading process,
