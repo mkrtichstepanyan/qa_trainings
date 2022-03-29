@@ -1,4 +1,4 @@
-package volodyaLesson.overloading;
+package javaClasses.overloading;
 
 /**
  * Simple geometrical class extended from abstract Shape

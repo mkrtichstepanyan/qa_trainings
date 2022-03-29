@@ -1,4 +1,4 @@
-package volodyaLesson.inheritance;
+package javaClasses.inheritance;
 
 public class Ferrari extends RacingCar{
     @Override
