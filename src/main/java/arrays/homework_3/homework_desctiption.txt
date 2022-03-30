@@ -1,0 +1,16 @@
+Read
+Read From Java 8 book till the 5-th chapter
+
+EPAM Learn
+
+
+Write Algorithms in the ./arrays.homework_3.SortingAlgorithms.java file
+
+After finishing the work
+    1. create new folder "name_surname" inside ./arrays.homework_3
+    2. copy SortingAlgorithms.java file into that folder
+    2. create new branch "<name>_<surname>_arrays_homework_3"
+    3. commit and push your changes
+    4. create Pull Request/Merge Request and assign to Mkrtich Stepanyan
+
+
