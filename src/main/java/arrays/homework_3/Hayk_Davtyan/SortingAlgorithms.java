@@ -1,15 +1,15 @@
-package computer_science_basics.homework_3.Hayk_Davtyan;
+package arrays.homework_3.Hayk_Davtyan;
 
 public class SortingAlgorithms {
     public static void main ( String args[]){
         int arr[] = {24, 12, 5, 32, 43, 2};
 
-        InsertionSort(arr);
-        SelectionSort(arr);
-        BubbleSort(arr);
+        insertionSort(arr);
+        selectionSort(arr);
+        bubbleSort(arr);
     }
 
-    public static void InsertionSort(int [] arr){
+    public static void insertionSort(int [] arr){
         for (int i = 0; i < arr.length; ++i){
             int j = i;
             while (j > 0 && arr[j - 1] > arr[j]){
@@ -22,7 +22,7 @@ public class SortingAlgorithms {
         printArr(arr);
     }
 
-    public static void SelectionSort(int [] arr) {
+    public static void selectionSort(int [] arr) {
         int min;
         int minIndex;
         int swap;
@@ -44,7 +44,7 @@ public class SortingAlgorithms {
         printArr(arr);
     }
 
-    public static void BubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length -1; ++i){
             for (int j = 0; j < arr.length - i - 1; ++j){
                 if(arr[j + 1] < arr[j]){
