@@ -1,4 +1,4 @@
-  Reading
+Reading
 Read from java 8 book chapter about Inheritance (chapter 8, may be different in other editions)
 
 EPAM Learn
