@@ -6,7 +6,9 @@ public class QualityEngineer extends Staff {
 
     private String type;
 
-    public QualityEngineer(String type) {
+    public QualityEngineer(String name, String lastName, String type) {
+        this.setName(name);
+        this.setLastName(lastName);
         this.type = type;
     }
 
@@ -32,18 +34,22 @@ public class QualityEngineer extends Staff {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         QualityEngineer that = (QualityEngineer) o;
-        return type.equals(that.type);
+
+        return getName().equals(that.getName())
+                && getLastName().equals(that.getLastName())
+                && type.equals(that.type);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type);
+        return Objects.hash(getName(), getLastName(), type);
     }
 
     @Override
     public String toString() {
-        return "QualityEngineer{" +
-                "type='" + type + '\'' +
+        return "QualityEngineer{" + "name='" + getName() + "\'" +
+                " lastName='" + getLastName() + '\'' +
+                " type='" + type + '\'' +
                 '}';
     }
 }

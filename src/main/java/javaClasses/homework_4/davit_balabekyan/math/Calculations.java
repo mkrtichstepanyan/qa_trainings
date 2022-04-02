@@ -2,22 +2,35 @@ package javaClasses.homework_4.davit_balabekyan.math;
 
 public class Calculations {
 
-    public static int getMean(int firstIntNumber, int secondIntNumber, int thirdIntNumber) {
-        int sum = firstIntNumber + secondIntNumber + thirdIntNumber;
+    public static int getMean(int... intVarargs) {
+        int sum = 0;
+        for (int number : intVarargs) {
+            sum += number;
+        }
         return sum / 3;
     }
 
-    public static double getMean(double firstDoubleNumber, double secondDoubleNumber, double thirdDoubleNumber) {
-        double sum = firstDoubleNumber + secondDoubleNumber + thirdDoubleNumber;
+    public static double getMean(double... doubleVarargs) {
+        double sum = 0;
+        for (double number : doubleVarargs) {
+            sum += number;
+        }
         return sum / 3;
     }
 
-    public static float getMean(float firstFloatNumber, float secondFloatNumber, float thirdFloatNumber) {
-        float sum = firstFloatNumber + secondFloatNumber + thirdFloatNumber;
+    public static float getMean(float... floatVarargs) {
+        float sum = 0;
+        for (float floatNumber : floatVarargs) {
+            sum += floatNumber;
+        }
         return sum / 3;
     }
 
-    public static String concat(String firstString, String secondString, String thirdString) {
-        return firstString + secondString + thirdString;
+    public static String concat(String... stringVarargs) {
+        String result = "";
+        for (String string : stringVarargs) {
+            result += string;
+        }
+        return result;
     }
 }

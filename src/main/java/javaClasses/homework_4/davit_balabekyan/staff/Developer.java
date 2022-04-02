@@ -6,7 +6,9 @@ public class Developer extends Staff {
 
     private String techStack;
 
-    public Developer(String techStack) {
+    public Developer(String name, String lastName, String techStack) {
+        this.setName(name);
+        this.setLastName(lastName);
         this.techStack = techStack;
     }
 
@@ -32,18 +34,21 @@ public class Developer extends Staff {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Developer developer = (Developer) o;
-        return techStack.equals(developer.techStack);
+        return getName().equals((developer.getName()))
+                && getLastName().equals(developer.getLastName())
+                && techStack.equals(developer.techStack);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(techStack);
+        return Objects.hash(getName(), getLastName(), techStack);
     }
 
     @Override
     public String toString() {
-        return "Developer{" +
-                "techStack='" + techStack + '\'' +
+        return "Developer{" + "name='" + getName() + '\'' +
+                " lastName='" + getLastName() + '\'' +
+                " techStack='" + techStack + '\'' +
                 '}';
     }
 }
