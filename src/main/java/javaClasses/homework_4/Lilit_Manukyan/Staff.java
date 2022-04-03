@@ -11,24 +11,29 @@ public abstract class Staff {
     }
 
     public String getName() {
+
         return this.name;
     }
 
     public String getLastName() {
+
         return this.lastName;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
 
     abstract void doWork();
 
     public static void getCompany() {
-        System.out.println("{developer/engineerName} is from " + company);
+
+        System.out.println(company);
     }
 }

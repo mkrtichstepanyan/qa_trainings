@@ -21,8 +21,4 @@ public class QualityEngineer extends Staff {
         System.out.println("name is: " + this.getName());
         System.out.println("type is " + this.getType());
     }
-
-    public static void getCompany() {
-        System.out.println("EngineerName is from " + company);
-    }
 }
