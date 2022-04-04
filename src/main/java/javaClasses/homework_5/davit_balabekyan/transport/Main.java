@@ -6,11 +6,11 @@ public class Main {
         Plane plane = new Plane("BOEING","737-900","Scott",1200,189);
         System.out.println(plane);
         System.out.println(plane.printTransport());
-        System.out.println(plane.bookTicket());
+        System.out.println(plane.bookable.bookTicket());
 
         System.out.println("========================================================================");
 
-        Taxi taxi = new Taxi("STAR", "bmw-m3", "Poxos");
+        Taxi taxi = new Taxi("STAR", "bmw-m3", "Armen");
         System.out.println(taxi);
         System.out.println(taxi.printTransport());
         System.out.println(taxi.bookTicket());
