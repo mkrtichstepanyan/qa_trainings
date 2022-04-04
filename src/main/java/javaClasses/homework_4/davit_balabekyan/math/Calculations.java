@@ -7,7 +7,7 @@ public class Calculations {
         for (int number : intVarargs) {
             sum += number;
         }
-        return sum / 3;
+        return sum / intVarargs.length;
     }
 
     public static double getMean(double... doubleVarargs) {
@@ -15,7 +15,7 @@ public class Calculations {
         for (double number : doubleVarargs) {
             sum += number;
         }
-        return sum / 3;
+        return sum / doubleVarargs.length;
     }
 
     public static float getMean(float... floatVarargs) {
@@ -23,7 +23,7 @@ public class Calculations {
         for (float floatNumber : floatVarargs) {
             sum += floatNumber;
         }
-        return sum / 3;
+        return sum / floatVarargs.length;
     }
 
     public static String concat(String... stringVarargs) {
