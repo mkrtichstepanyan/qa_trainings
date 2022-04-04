@@ -4,14 +4,13 @@ public class QualityEngineer extends Staff{
 
     private String fieldType;
 
-    public QualityEngineer(String field){
+    public QualityEngineer(String field, String name){
         this.fieldType = field;
+        super.setName(name);
     }
 
     @Override
     public String doWork() {
-        setName("Jon");
-        setCompany("EGS");
         return  getName() + " / " + fieldType + " is from: " + getCompany();
     }
 }

@@ -24,9 +24,9 @@ public class Calculations {
     }
 
     public  String getMean(String... str) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (String n : str)
-            result += n;
-        return result;
+            result.append(n);
+        return result.toString();
     }
 }
