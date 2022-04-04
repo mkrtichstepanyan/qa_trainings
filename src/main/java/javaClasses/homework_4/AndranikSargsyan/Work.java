@@ -6,7 +6,7 @@ public class Work {
         Staff staff = new Developer("Automation QA","And", "Sargsyan", "epam");
         System.out.println(staff.doWork());
 
-        Staff staff1 = new QualityEngineer("Java", "Karl");
+        Staff staff1 = new QualityEngineer("Javal", "Adam", "Sendler");
         System.out.println(staff1.doWork());
     }
 }

@@ -10,14 +10,14 @@ public class Calculations {
     }
 
     public double getMean(double... nums) {
-        int result = 0;
+        double result = 0;
         for (double n : nums)
             result += n;
         return (double) result / nums.length;
     }
 
     public float getMean(float... nums) {
-        int result = 0;
+        float result = 0;
         for (float n : nums)
             result += n;
         return (float) result / nums.length;
