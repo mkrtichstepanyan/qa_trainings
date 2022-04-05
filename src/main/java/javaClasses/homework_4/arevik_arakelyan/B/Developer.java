@@ -3,7 +3,11 @@ package javaClasses.homework_4.arevik_arakelyan.B;
 public class Developer extends Staff {
     private  String techstack;
 
-    protected String getTechstack() {
+    public Developer(String names, String surnames) {
+        super(names, surnames);
+    }
+
+    private String getTechstack() {
         return techstack;
     }
 

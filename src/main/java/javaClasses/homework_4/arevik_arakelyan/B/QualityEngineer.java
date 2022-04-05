@@ -4,16 +4,20 @@ public class QualityEngineer extends Staff {
 
     private String type;
 
-    protected String getType() {
+    public QualityEngineer(String names, String surnames) {
+        super(names, surnames);
+    }
+
+    public String getType() {
         return type;
     }
 
-    protected void setType(String type) {
+    public void setType(String type) {
         this.type = type;
     }
 
     @Override
-    protected String doWork() {
+    public String doWork() {
         String result = getNames() + " " + getLastName() + " is " + getType()+ " engineer from  " + getCompany() ;
         return  result;
     }

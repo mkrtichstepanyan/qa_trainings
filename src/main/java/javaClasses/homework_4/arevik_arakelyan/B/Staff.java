@@ -1,9 +1,14 @@
 package javaClasses.homework_4.arevik_arakelyan.B;
 
 public abstract class Staff {
-    protected String names;
-    protected String surnames;
+    private String names;
+    private String surnames;
     protected  final static   String COMPANY = "My Company";
+
+    public Staff(String names, String surnames) {
+        this.names = names;
+        this.surnames = surnames;
+    }
 
     protected String getNames() {
         return names;
