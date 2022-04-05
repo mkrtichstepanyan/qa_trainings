@@ -18,6 +18,13 @@ public class Plane implements Printer {
     private int horsePower;
     private int capacity;
 
+    Bookable bookable = new Bookable() {
+        @Override
+        public String bookTicket() {
+            return "It was booked for plane";
+        }
+    };
+
     public Plane(String company, String model, String driver, int horsePower, int capacity) {
         this.company = company;
         this.model = model;
@@ -25,13 +32,6 @@ public class Plane implements Printer {
         this.horsePower = horsePower;
         this.capacity = capacity;
     }
-
-    Bookable bookable = new Bookable() {
-        @Override
-        public String bookTicket() {
-            return "It was booked for plane";
-        }
-    };
 
     @Override
     public String printTransport() {
