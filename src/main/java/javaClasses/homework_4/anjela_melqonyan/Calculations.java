@@ -1,26 +1,38 @@
 package javaClasses.homework_4.anjela_melqonyan;
 
 public class Calculations {
-    public static int getMean(int a, int b, int c, int d) {
-        int sum = a + b + c + d;
-        return sum / 4;
-    }
-
-    public static double getMean(double a, double b, double c, double d) {
-        double sum = a + b + c + d;
-        return sum / 4;
-    }
-
-    public static float getMean(float a, float b, float c, float d) {
-        float sum = a + b + c + d;
-        return sum / 4;
-    }
-
-    public static String getMean(String a, String b, String c) {
-
-        return a + b + c;
+    public static int getMean(int ... numbers) {
+      int sum=0;
+      for( int i=0; i< numbers.length; i++){
+          sum=sum+numbers[i];
+      }
+      return sum/ numbers.length;
     }
 
 
-}
+    public static double getMean(double ... numbers) {
+        double sum = 0;
+        for(int i=0; i< numbers.length; i++){
+            sum = sum+numbers[i];
+        }
+        return sum/ numbers.length;
+    }
 
+    public static float getMean(float ... numbers) {
+        float sum = 0;
+        for( int i=0; i< numbers.length; i++){
+            sum= sum+numbers[i];
+        }
+        return sum/ numbers.length;
+    }
+
+    public static String getMean(String ... args) {
+        String result ="";
+        for (int i=0; i< args.length;i++){
+
+             result=result+args[i];
+        }
+        return result;
+    }
+
+   }

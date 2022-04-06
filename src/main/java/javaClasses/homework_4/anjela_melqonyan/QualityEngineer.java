@@ -3,10 +3,12 @@ package javaClasses.homework_4.anjela_melqonyan;
 public class QualityEngineer extends  Staff{
     public String tape;
     public QualityEngineer(String tape){
+
         this.tape=tape;
     }
 
     public String getTape() {
+
         return tape;
     }
 
