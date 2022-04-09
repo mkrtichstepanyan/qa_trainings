@@ -17,16 +17,23 @@ public class Taxi implements Bookable, Stoppable {
         this.address = address;
     }
 
+    /*
+    For booking a ticket you need to provide an address of living in the following format:
+    N homeNumber, Street, City, Region
+    e.g. N 46, Matnishyan Street, Gyumri, Shirak
+    Checking of the valid address is done by using a regular expression "^[N.0-9a-zA-Z\\s,]+$"
+    which means you can use only numbers, latin alphabet letters and spaces (with no other characters).
+    Booking ticket will fail if address is not provided as required. In that case a RuntimeException will be thrown.
+     */
     @Override
     public String bookTicket() {
         String str = "N" + address.getHomeNumber() + ", " + address.getStreet() + " ," + address.getCity()
                 + " ," + address.getRegion();
         String regex = "^[N.0-9a-zA-Z\\s,]+$";
-        // valid address will be N homeNumber, Street, City, Region
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
         if (!matcher.matches()) {
-            return "Address doesn't match the requirements. Please check it";
+            throw new RuntimeException("Address doesn't match the requirements. Please check it");
         } else {
             return "Your booking was made successfully. " + getTransportName() +
                     " will take you to the destination address in 2 hours considering traffic jams on the street";

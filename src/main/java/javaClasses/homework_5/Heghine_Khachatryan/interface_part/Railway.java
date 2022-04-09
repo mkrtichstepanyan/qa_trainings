@@ -22,7 +22,7 @@ public class Railway implements Bookable, Stoppable {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(getPassport());
         if (!matcher.matches()) {
-            return "Passport number doesn't match. Please check again";
+            throw new IllegalArgumentException("Passport number doesn't match. Please check again");
         } else {
             return "Ticket for " + getName() + " " + getSurname() + " passport (" + getPassport() + ") is booked" +
                     " for Monday 04, 2022.The riding on " + getTransportName() + " will take place at 14:00 PM.";
