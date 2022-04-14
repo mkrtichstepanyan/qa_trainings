@@ -11,7 +11,7 @@ import java.util.Scanner;
 @Getter
 @Setter
 @ToString
-public class Plane implements Bookable, TransportPrinter {
+public class Plane implements Bookable, TransportPrinter, Stoppable {
     final String TYPE = "PLANE";
     private String country;
     private String airport;

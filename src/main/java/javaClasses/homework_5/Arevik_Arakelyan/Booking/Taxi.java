@@ -9,22 +9,15 @@ import lombok.ToString;
 @Setter
 @Getter
 @AllArgsConstructor
-public class Taxi implements Bookable, Stoppable, TransportPrinter {
+public class Taxi implements Bookable, TransportPrinter {
     final String TYPE = "TAXI";
     private String city;
     private String street;
     private String carSize;
-    private String stopStreet;
-    private int stopTime;
 
     @Override
     public String bookTicket() {
         return "Taxi";
-    }
-
-    @Override
-    public String makingStop() {
-        return stopStreet + " " + "street" + " " + stopTime + " " + "minute";
     }
 
     @Override

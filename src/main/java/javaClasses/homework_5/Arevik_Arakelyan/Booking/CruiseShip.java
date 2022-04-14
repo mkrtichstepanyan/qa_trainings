@@ -11,7 +11,7 @@ import java.util.Scanner;
 @Setter
 @Getter
 @AllArgsConstructor
-public class CruiseShip implements Bookable, TransportPrinter {
+public class CruiseShip implements Bookable, TransportPrinter, Stoppable {
     final String TYPE = "CRUISESHIP";
     private String ship;
     private int shipFloor;
