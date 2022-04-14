@@ -11,7 +11,7 @@ import java.util.Scanner;
 @Getter
 @Setter
 @ToString
-public class Railway implements Bookable, Stoppable, TransportPrinter {
+public class Railway implements Bookable, TransportPrinter {
     final String TYPE = "RAILWAY";
     private String city;
     private String station;
@@ -31,11 +31,6 @@ public class Railway implements Bookable, Stoppable, TransportPrinter {
         seat = console.nextInt();
 
         return "Thank you!" + " " + city + " " + station + " " + wagonNumber + " " + TYPE + " is booked";
-    }
-
-    @Override
-    public String makingStop() {
-        return Stoppable.super.makingStop();
     }
 
     @Override

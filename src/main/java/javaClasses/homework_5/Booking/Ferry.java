@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Ferry implements Bookable, TransportPrinter {
+public class Ferry implements Bookable, TransportPrinter, Stoppable {
     final String TYPE = "FERRY";
     private String model;
     private int id;
