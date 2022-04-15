@@ -1,0 +1,9 @@
+Work description
+    1. create new folder "name_surname" inside ./designpatterns/homework_7
+    2. write all design patterns step by step into that folder
+    3. create all Singleton examples also which we did not discuss during lesson
+    4. create new branch "<name>_<surname>_designpatterns_homework_7"
+    5. commit and push your changes
+    6. create Pull Request/Merge Request and assign to Mkrtich Stepanyan
+
+
