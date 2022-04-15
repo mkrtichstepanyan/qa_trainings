@@ -1,4 +1,4 @@
-package javaClasses.homework_4;
+package javaClasses.homework_4.arevik_arakelyan.A;
 
 public class Math {
     public static void main(String[] args) {
