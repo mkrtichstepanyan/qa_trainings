@@ -4,6 +4,6 @@ import designpatterns.homework_7.Heghine_Khachatryan.abstractfactory.products.De
 import designpatterns.homework_7.Heghine_Khachatryan.abstractfactory.products.Loan;
 
 public abstract class BankServiceFactory {
-    public abstract Loan loanProvider();
-    public abstract Deposit depositProvider();
+    public abstract Loan loanProvider(String loan);
+    public abstract Deposit depositProvider(String deposit);
 }
