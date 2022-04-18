@@ -7,9 +7,6 @@ import designpatterns.proxy.video.VideoDownloader;
 
 public class MainApp {
 
-    /*
-     * Video Reference:
-     */
     public static void main(String[] args) {
 
         Internet internet = new ProxyInternet();
