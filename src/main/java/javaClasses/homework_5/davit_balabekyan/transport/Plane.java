@@ -2,7 +2,11 @@ package javaClasses.homework_5.davit_balabekyan.transport;
 
 import javaClasses.homework_5.davit_balabekyan.transport.interfaces.Bookable;
 import javaClasses.homework_5.davit_balabekyan.transport.interfaces.Printer;
-import lombok.*;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Getter
@@ -18,12 +22,7 @@ public class Plane implements Printer {
     private int horsePower;
     private int capacity;
 
-    Bookable bookable = new Bookable() {
-        @Override
-        public String bookTicket() {
-            return "It was booked for plane";
-        }
-    };
+    Bookable bookable = () -> "It was booked for plane";
 
     public Plane(String company, String model, String driver, int horsePower, int capacity) {
         this.company = company;
