@@ -4,7 +4,7 @@ public class Singleton1 {
 
     private static Singleton1 instance;
 
-    private Singleton1() {
+    public Singleton1() {
     }
 
     // TODO: Thread unsafe

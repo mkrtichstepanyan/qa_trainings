@@ -7,9 +7,12 @@ import designpatterns.proxy.video.VideoDownloader;
 
 public class MainApp {
 
+//*<<<<<<< HEAD
     /*
      * Video Reference:
      */
+//=======
+//>>>>>>> 1e600eb8dbc3c776ee3ae59e427c8cf1adb678ba*
     public static void main(String[] args) {
 
         Internet internet = new ProxyInternet();
