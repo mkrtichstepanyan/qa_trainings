@@ -1,0 +1,28 @@
+Reading
+Read from java 8 book chapter about Nested classes, enums and interfaces
+
+EPAM Learn
+Complete tasks and learning materials referring to nested classes, interfaces and enums
+
+CODING TASK
+
+A. INTERFACE
+
+1. Create classes Plane, Taxi, Railway, CruiseShip, Ferry add any fields and methods to interact with them.Along that methods
+create method printTransport for each class, which will print each transport type.
+2. Create interface Bookable, add method String bookTicket() (should return message for which transport
+it was booked). Implement in all methods above.
+3. Create interface Stoppable, add default method String makingStop(). Implement it for ground type of transport.
+
+B. ENUMS
+
+1. Create enum Transport, add enums AIR, GROUND, WATER
+2. Create class transport manager, add void method showType(Transport transport), while providing any enum type to method
+it should print transport types (e.g. WATER- Available transport types are CruiseShip and Ferry and etc). Checking of which
+Transport enum was provided should be made via switch/case.
+
+After finishing the work
+1. Create new folder "name_surname" inside ./javaClasses.homework_5
+2. Copy create class and classes into that folder
+3. Create new branch "<name>_<surname>_java_classes_homework_5"
+4. Create Pull Request/Merge Request and assign to Volodya Kotsinyan(volodya11)
