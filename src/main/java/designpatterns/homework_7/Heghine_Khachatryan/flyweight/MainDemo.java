@@ -20,7 +20,6 @@ public class MainDemo {
     }
 
     public static void main(String[] args) {
-        CircleFactory circleFactory = new CircleFactory();
         for (int i = 0; i < 10; i++) {
         Circle circle = (Circle) CircleFactory.drawShape(getRandomColors());
             circle.setHeight(getRandomHeight());

@@ -15,5 +15,4 @@ public class CircleFactory {
         }
         return circle;
     }
-
 }

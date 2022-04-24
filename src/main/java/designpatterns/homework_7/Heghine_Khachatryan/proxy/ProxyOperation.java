@@ -10,22 +10,28 @@ public class ProxyOperation implements Operations{
 
     @Override
     public void view() {
-        if (role.equalsIgnoreCase("Admin") ||
-        role.equalsIgnoreCase("User")) {
-            operationsPerformance = new OperationsPerformance();
-            operationsPerformance.view();
-        } else {
-            System.out.println("You aren't allowed to view this content");
+        if (operationsPerformance == null) {
+            if (role.equalsIgnoreCase("Admin") ||
+                    role.equalsIgnoreCase("User")) {
+                operationsPerformance = new OperationsPerformance();
+                System.out.println("an object is created for view operation");
+            } else {
+               throw new RuntimeException("You aren't allowed to view this content");
+            }
         }
+                operationsPerformance.view();
     }
 
     @Override
     public void edit() {
-        if (role.equalsIgnoreCase("Admin")) {
-            operationsPerformance = new OperationsPerformance();
-            operationsPerformance.edit();
-        } else {
-            System.out.println("You can't edit file");
+        if (operationsPerformance == null) {
+            if (role.equalsIgnoreCase("Admin")) {
+                operationsPerformance = new OperationsPerformance();
+                System.out.println("an object is created for edit operation");
+            } else {
+              throw new RuntimeException("You can't edit file");
+            }
         }
+                operationsPerformance.edit();
     }
 }
