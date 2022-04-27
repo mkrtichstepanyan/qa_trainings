@@ -1,4 +1,4 @@
-package designpatterns.proxy;
+package designpatterns.homework_7.AndSargsyan.proxy;
 
 import designpatterns.proxy.internet.Internet;
 import designpatterns.proxy.internet.ProxyInternet;
@@ -13,14 +13,9 @@ public class MainApp {
         internet.connectTo("google.com");
         internet.connectTo("banned.com");
 
-        System.out.println("====================================================");
+        System.out.println("=====================");
 
         VideoDownloader videoDownloader = new ProxyVideoDownloader();
-        videoDownloader.getVideo("geekific");
-        videoDownloader.getVideo("geekific");
-        videoDownloader.getVideo("likeNsub");
-        videoDownloader.getVideo("likeNsub");
-        videoDownloader.getVideo("geekific");
+        videoDownloader.getVideo("GREEN SOUND");
     }
-
 }
