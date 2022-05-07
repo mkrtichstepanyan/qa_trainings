@@ -1,0 +1,19 @@
+{
+  "firstName": "Ram",
+  "lastName": "Sharma",
+  "age": 26,
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "phone-number": "212 888-2365"
+    },
+    {
+      "type": "work",
+      "phone-number": "333 888-2365"
+    },
+    {
+      "type": "cellphone",
+      "phone-number": "444 888-2365"
+    }
+  ]
+}
