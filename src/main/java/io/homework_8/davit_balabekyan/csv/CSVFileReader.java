@@ -25,7 +25,6 @@ public class CSVFileReader {
 
     public static String[] getRowByName(String name) {
         try (CSVReader csvReader = new CSVReader(new FileReader(FILE))) {
-//            StringBuilder stringBuilder = new StringBuilder();
             List<String[]> list = csvReader.readAll();
             for (String[] row : list) {
                 if (Arrays.asList(row).contains(name)) {
