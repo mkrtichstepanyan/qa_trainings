@@ -1,0 +1,11 @@
+Work description
+    1. create new folder "name_surname" inside ./io/homework_8
+    2. create packages "excel" and "csv" inside "name_surname"
+    3. copy "./homework_8/excel.xlsx" file into "excel" folder and "./homework_8/csv.csv" file into "csv" folder
+    4. create classes which should read and write "excel.xlsx" file into "excel" folder
+    5. create classes which should read and write csv.csv file into "csv" folder
+    4. create new branch "<name>_<surname>_io_homework_8"
+    5. commit and push your changes
+    6. create Pull Request/Merge Request and assign to Mkrtich Stepanyan
+
+
