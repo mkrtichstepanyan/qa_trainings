@@ -8,10 +8,10 @@ import java.io.IOException;
 
 public class CSVFileCreator {
 
-    private static final File file = new File("src/main/java/io/homework_8/davit_balabekyan/csv/csv.csv");
+    private static final File FILE = new File("src/main/java/io/homework_8/davit_balabekyan/csv/csv.csv");
 
     public static void createCsvFile() {
-        try (CSVWriter csvWriter = new CSVWriter(new FileWriter(file))) {
+        try (CSVWriter csvWriter = new CSVWriter(new FileWriter(FILE))) {
             csvWriter.writeNext(new String[]{"ID", "Name", "Surname", "Gender", "Age"});
             csvWriter.writeNext(new String[]{"1", "James", "Gosling", "Male", "66"});
             csvWriter.writeNext(new String[]{"2", "Mike", "Sheridan", "Male", "58"});
