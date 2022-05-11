@@ -1,3 +1,4 @@
+/*
 package io.lesson.json.pojo;
 
 
@@ -11,3 +12,4 @@ public class PhoneNumber {
     public String phoneNumber;
 }
 
+*/
