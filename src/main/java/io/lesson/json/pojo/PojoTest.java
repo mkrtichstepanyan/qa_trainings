@@ -1,3 +1,4 @@
+/*
 package io.lesson.json.pojo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,3 +21,4 @@ public class PojoTest {
         });
     }
 }
+*/
